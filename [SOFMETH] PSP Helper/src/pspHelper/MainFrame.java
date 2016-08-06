@@ -5,17 +5,10 @@
  */
 package pspHelper;
 
-//import org.apache.poi.xwpf.usermodel.XWPFDocument;
-
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 
 /**
@@ -33,7 +26,6 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         center();
         home = jTabbedPane1;
-        XWPFDocument document = new XWPFDocument(); 
     }
     
     public void center() {
@@ -44,6 +36,12 @@ public class MainFrame extends javax.swing.JFrame {
     private void close() {
         setVisible(false);
         dispose();
+    }
+    
+    private void openForm(JPanel p, String type) {
+        MainForm form = new MainForm(p, type);
+        form.setVisible(true);
+        close();
     }
     
     /**
@@ -559,10 +557,7 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        MainForm form = new MainForm((JPanel)new PPS());
-        form.setVisible(true);
-        close();
+        openForm((JPanel)new PPS(1), "Project Plan Summary");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -586,7 +581,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        openForm((JPanel)new PPS(2), "Project Plan Summary");
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
@@ -602,7 +597,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        openForm((JPanel)new PPS(3), "Project Plan Summary");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -642,7 +637,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton55ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
+        openForm((JPanel)new PPS(4), "Project Plan Summary");
     }//GEN-LAST:event_jButton21ActionPerformed
 
     private void jButton56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton56ActionPerformed
@@ -670,7 +665,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton58ActionPerformed
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
+        openForm((JPanel)new PPS(5), "Project Plan Summary");
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
