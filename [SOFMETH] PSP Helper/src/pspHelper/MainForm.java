@@ -24,7 +24,7 @@ public class MainForm extends javax.swing.JFrame {
         this.type = type;
         this.panel = panel;
         title.setText(type);
-        setPreferredSize(new Dimension(1057, 529));
+        setPreferredSize(new Dimension(1057, 675));
         center();
         scrollPane.setViewportView(panel);
         repaint(); revalidate();
@@ -73,8 +73,10 @@ public class MainForm extends javax.swing.JFrame {
         language = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1057, 800));
         setMinimumSize(new java.awt.Dimension(1057, 529));
-        setPreferredSize(new java.awt.Dimension(1057, 800));
+        setPreferredSize(new java.awt.Dimension(1057, 675));
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -244,9 +246,10 @@ public class MainForm extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addComponent(language, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 540, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7))
         );
 
         pack();
