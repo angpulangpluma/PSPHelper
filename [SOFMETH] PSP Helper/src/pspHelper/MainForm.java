@@ -44,6 +44,7 @@ public class MainForm extends javax.swing.JFrame {
         switch(type) {
             case "Project Plan Summary": ((PPS)panel).generate(); break;
             case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
+            case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
         }
     }
 
