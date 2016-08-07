@@ -103,17 +103,21 @@ public class DocumentGenerator {
         System.out.println("rows: " + rows);
         System.out.println("cols: " + cols);
         
-        for(int i = 0; i < cols; i++)
+        for(int i = 0; i < cols; i++) {
             data[0][i] = table.getColumnName(i);
+            System.out.println(i +" - "+table.getColumnName(i));
+        }
         
-        for(int i = 1; i < rows-1; i++) {
+        for(int i = 0; i < rows-1; i++) {
             for(int j = 0; j < cols; j++) {
                 if(table.getValueAt(i, j) == null)
-                    data[i][j] = "      ";
+                    data[i+1][j] = "            ";
                 else
-                    data[i][j] = table.getValueAt(i, j).toString().trim();
+                    data[i+1][j] = table.getValueAt(i, j).toString().trim();
+                
+                System.out.println(j +" - "+data[i+1][j]);
             }
-        }
+        } 
         return data;
     }
 }
