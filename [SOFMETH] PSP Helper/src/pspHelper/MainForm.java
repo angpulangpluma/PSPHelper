@@ -23,13 +23,11 @@ public class MainForm extends javax.swing.JFrame {
         initComponents();
         this.type = type;
         this.panel = panel;
+        title.setText(type);
         setPreferredSize(new Dimension(1057, 529));
         center();
         scrollPane.setViewportView(panel);
         repaint(); revalidate();
-        
-        // gen doc
-        gen.createNewDoc();
     }
     
     public void center() {
@@ -45,6 +43,7 @@ public class MainForm extends javax.swing.JFrame {
     private void addBody() {
         switch(type) {
             case "Project Plan Summary": ((PPS)panel).generate(); break;
+            case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
         }
     }
 
@@ -61,7 +60,7 @@ public class MainForm extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         scrollPane = new javax.swing.JScrollPane();
-        jLabel1 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         professor = new javax.swing.JTextField();
@@ -130,12 +129,12 @@ public class MainForm extends javax.swing.JFrame {
         scrollPane.setMinimumSize(new java.awt.Dimension(1042, 800));
         scrollPane.setPreferredSize(new java.awt.Dimension(1042, 800));
 
-        jLabel1.setBackground(new java.awt.Color(153, 153, 153));
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("PSP0 PROJECT PLAN SUMMARY");
-        jLabel1.setOpaque(true);
+        title.setBackground(new java.awt.Color(153, 153, 153));
+        title.setFont(new java.awt.Font("Century Gothic", 1, 20)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("PSP0 PROJECT PLAN SUMMARY");
+        title.setOpaque(true);
 
         jLabel3.setBackground(new java.awt.Color(153, 153, 153));
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -192,7 +191,7 @@ public class MainForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +224,7 @@ public class MainForm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -261,8 +260,10 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        gen.createNewDoc(type);
         gen.addHeader(type, student.getText(), professor.getText(), date.getText(), section.getText(), language.getText());
         addBody();
+        gen.saveDoc();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -308,7 +309,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField date;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -320,5 +320,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollPane;
     private javax.swing.JTextField section;
     private javax.swing.JTextField student;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,6 +13,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
@@ -27,9 +29,11 @@ import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 public class DocumentGenerator {
     public static DocumentGenerator gen = new DocumentGenerator();
     private XWPFDocument doc;
+    private String type;
             
-    public void createNewDoc() {        
+    public void createNewDoc(String type) {        
         doc = new XWPFDocument();
+        this.type = type;
     }
     
     public void saveDoc() {
@@ -37,7 +41,7 @@ public class DocumentGenerator {
         String timeStamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(Calendar.getInstance().getTime());
         
         try {
-            out = new FileOutputStream(new File("FORM-" + timeStamp + ".docx"));
+            out = new FileOutputStream(new File(type + "-" + timeStamp + ".docx"));
             doc.write(out);
             out.close();
         } catch (FileNotFoundException ex) {
@@ -69,7 +73,8 @@ public class DocumentGenerator {
         run2.setText("Language: " + lang); run2.addBreak();
     }
     
-    public void addTable(String data[][]) {
+    public void addTable(JTable jtable) {
+        String data[][] = getData(jtable);
         XWPFTable table = doc.createTable();
         XWPFTableRow row;
         int rows = data.length;
@@ -79,12 +84,36 @@ public class DocumentGenerator {
             row = table.createRow();
             for(int j = 0; j < cols; j++) {
                 row.addNewTableCell().setText(data[i][j]);
-                //row.addNewTableCell().setText("   x   ");
             }
         }
         
         XWPFParagraph p = doc.createParagraph();
         XWPFRun run = p.createRun();
         run.addBreak();
+    }
+    
+    private String[][] getData(JTable table) {
+        
+        DefaultTableModel dtm = (DefaultTableModel) table.getModel();
+    
+        int rows = dtm.getRowCount()+1;
+        int cols = dtm.getColumnCount();
+        String data[][] = new String[rows][cols];
+        
+        System.out.println("rows: " + rows);
+        System.out.println("cols: " + cols);
+        
+        for(int i = 0; i < cols; i++)
+            data[0][i] = table.getColumnName(i);
+        
+        for(int i = 1; i < rows-1; i++) {
+            for(int j = 0; j < cols; j++) {
+                if(table.getValueAt(i, j) == null)
+                    data[i][j] = "      ";
+                else
+                    data[i][j] = table.getValueAt(i, j).toString().trim();
+            }
+        }
+        return data;
     }
 }

@@ -33,31 +33,31 @@ public class PPS extends javax.swing.JPanel {
     
     public void generate() {
         switch(type) {
-            case 1: gen.addTable(getData(table3)); 
-                    gen.addTable(getData(table4)); 
-                    gen.addTable(getData(table5)); break;
+            case 1: gen.addTable(table3); 
+                    gen.addTable(table4); 
+                    gen.addTable(table5); break;
             
             case 2: 
-            case 3: gen.addTable(getData(table2)); 
-                    gen.addTable(getData(table3)); 
-                    gen.addTable(getData(table4)); 
-                    gen.addTable(getData(table5)); break;
+            case 3: gen.addTable(table2); 
+                    gen.addTable(table3); 
+                    gen.addTable(table4); 
+                    gen.addTable(table5); break;
                     
-            case 4: gen.addTable(getData(table0)); 
-                    gen.addTable(getData(table3)); 
-                    gen.addTable(getData(table2)); 
-                    gen.addTable(getData(table4));
-                    gen.addTable(getData(table5)); break;
+            case 4: gen.addTable(table0); 
+                    gen.addTable(table3); 
+                    gen.addTable(table2); 
+                    gen.addTable(table4);
+                    gen.addTable(table5); break;
                     
-            case 5: gen.addTable(getData(table1)); 
-                    gen.addTable(getData(table2)); 
-                    gen.addTable(getData(table3)); 
-                    gen.addTable(getData(table4)); 
-                    gen.addTable(getData(table5)); break;
+            case 5: gen.addTable(table1); 
+                    gen.addTable(table2); 
+                    gen.addTable(table3); 
+                    gen.addTable(table4); 
+                    gen.addTable(table5); break;
         }
-        gen.saveDoc();
     }
     
+    /*
     private String[][] getData(JTable table) {
         
         DefaultTableModel dtm = (DefaultTableModel) table.getModel();
@@ -83,6 +83,7 @@ public class PPS extends javax.swing.JPanel {
         }
         return data;
     }
+    */
 
     /**
      * This method is called from within the constructor to initialize the form.
