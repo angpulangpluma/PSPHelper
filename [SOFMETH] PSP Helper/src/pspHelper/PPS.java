@@ -22,9 +22,17 @@ public class PPS extends javax.swing.JPanel {
         initComponents();
         this.type = type;
         switch(type) {
-            case 1: remove(pane0); remove(pane1); remove(pane2); break;
+            case 1: 
+                remove(pane0); 
+                remove(pane1); 
+                remove(pane2); 
+                remove(pane3);
+                remove(pane7); break;
             case 2: 
-            case 3: remove(pane0); remove(pane1); break;
+            case 3: 
+                remove(pane0); 
+                remove(pane1);
+                remove(pane2); break;
             case 4: remove(pane1); break;
             case 5: remove(pane0); break;
         }
@@ -33,12 +41,12 @@ public class PPS extends javax.swing.JPanel {
     
     public void generate() {
         switch(type) {
-            case 1: gen.addTable(table3); 
+            case 1: gen.addTable(table6); 
                     gen.addTable(table4); 
                     gen.addTable(table5); break;
             
             case 2: 
-            case 3: gen.addTable(table2); 
+            case 3: gen.addTable(table7); 
                     gen.addTable(table3); 
                     gen.addTable(table4); 
                     gen.addTable(table5); break;
@@ -98,8 +106,12 @@ public class PPS extends javax.swing.JPanel {
         table0 = new javax.swing.JTable();
         pane1 = new javax.swing.JScrollPane();
         table1 = new javax.swing.JTable();
+        pane7 = new javax.swing.JScrollPane();
+        table7 = new javax.swing.JTable();
         pane2 = new javax.swing.JScrollPane();
         table2 = new javax.swing.JTable();
+        pane6 = new javax.swing.JScrollPane();
+        table6 = new javax.swing.JTable();
         pane3 = new javax.swing.JScrollPane();
         table3 = new javax.swing.JTable();
         pane4 = new javax.swing.JScrollPane();
@@ -186,6 +198,56 @@ public class PPS extends javax.swing.JPanel {
 
         add(pane1);
 
+        pane7.setMinimumSize(new java.awt.Dimension(1027, 50));
+        pane7.setPreferredSize(new java.awt.Dimension(1027, 450));
+
+        table7.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        table7.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Base (B)", null, null, null},
+                {"  Deleted (D)", null, null, null},
+                {"  Modified (M)", null, null, null},
+                {"  Added (A)", null, null, null},
+                {"  Reused (R)", null, null, null},
+                {"Total New and Changed (N)", null, null, null},
+                {"Total LOC (T)", null, null, null},
+                {"Total Reused", null, null, null}
+            },
+            new String [] {
+                "Program Size", "Plan", "Actual", "To Date"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                if (columnIndex==1 && rowIndex!=5)
+                return false;
+                else return canEdit [columnIndex];
+            }
+        });
+        table7.setFocusable(false);
+        table7.setGridColor(new java.awt.Color(204, 204, 204));
+        table7.setMaximumSize(new java.awt.Dimension(2147483647, 216));
+        table7.setMinimumSize(new java.awt.Dimension(1027, 216));
+        table7.setOpaque(false);
+        table7.setPreferredSize(new java.awt.Dimension(1027, 216));
+        table7.setRowHeight(27);
+        table7.setRowSelectionAllowed(false);
+        table7.getTableHeader().setResizingAllowed(false);
+        table7.getTableHeader().setReorderingAllowed(false);
+        table7.getTableHeader().setFont(new Font("Century Gothic", Font.PLAIN, 18));
+        pane7.setViewportView(table7);
+        if (table7.getColumnModel().getColumnCount() > 0) {
+            table7.getColumnModel().getColumn(0).setHeaderValue("Program Size");
+            table7.getColumnModel().getColumn(1).setHeaderValue("Plan");
+            table7.getColumnModel().getColumn(2).setHeaderValue("Actual");
+            table7.getColumnModel().getColumn(3).setHeaderValue("To Date");
+        }
+
+        add(pane7);
+
         pane2.setMinimumSize(new java.awt.Dimension(1027, 50));
         pane2.setPreferredSize(new java.awt.Dimension(1027, 450));
 
@@ -225,8 +287,58 @@ public class PPS extends javax.swing.JPanel {
         table2.getTableHeader().setReorderingAllowed(false);
         table2.getTableHeader().setFont(new Font("Century Gothic", Font.PLAIN, 18));
         pane2.setViewportView(table2);
+        if (table2.getColumnModel().getColumnCount() > 0) {
+            table2.getColumnModel().getColumn(0).setHeaderValue("Program Size");
+            table2.getColumnModel().getColumn(1).setHeaderValue("Plan");
+            table2.getColumnModel().getColumn(2).setHeaderValue("Actual");
+            table2.getColumnModel().getColumn(3).setHeaderValue("To Date");
+        }
 
         add(pane2);
+
+        pane6.setMinimumSize(new java.awt.Dimension(1027, 50));
+        pane6.setPreferredSize(new java.awt.Dimension(1027, 360));
+
+        table6.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        table6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Planning", null, null, null},
+                {"Design", null, null, null},
+                {"Code", null, null, null},
+                {"Compile", null, null, null},
+                {"Test", null, null, null},
+                {"Postmortem", null, null, null},
+                {"Total", null, null, null}
+            },
+            new String [] {
+                "Time in Phase(Min.)", "Plan", "To Date", "To Date %"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                if (columnIndex==1 &&
+                    rowIndex>=0 && rowIndex<=5){
+                    return false;
+                }
+                else return canEdit [columnIndex];
+            }
+        });
+        table6.setFocusable(false);
+        table6.setGridColor(new java.awt.Color(204, 204, 204));
+        table6.setMinimumSize(new java.awt.Dimension(1027, 189));
+        table6.setOpaque(false);
+        table6.setPreferredSize(new java.awt.Dimension(1027, 189));
+        table6.setRowHeight(27);
+        table6.setRowSelectionAllowed(false);
+        table6.getTableHeader().setResizingAllowed(false);
+        table6.getTableHeader().setReorderingAllowed(false);
+        table6.getTableHeader().setFont(new Font("Century Gothic", Font.PLAIN, 18));
+        pane6.setViewportView(table6);
+
+        add(pane6);
 
         pane3.setMinimumSize(new java.awt.Dimension(1027, 50));
         pane3.setPreferredSize(new java.awt.Dimension(1027, 360));
@@ -356,11 +468,15 @@ public class PPS extends javax.swing.JPanel {
     private javax.swing.JScrollPane pane3;
     private javax.swing.JScrollPane pane4;
     private javax.swing.JScrollPane pane5;
+    private javax.swing.JScrollPane pane6;
+    private javax.swing.JScrollPane pane7;
     private javax.swing.JTable table0;
     private javax.swing.JTable table1;
     private javax.swing.JTable table2;
     private javax.swing.JTable table3;
     private javax.swing.JTable table4;
     private javax.swing.JTable table5;
+    private javax.swing.JTable table6;
+    private javax.swing.JTable table7;
     // End of variables declaration//GEN-END:variables
 }
