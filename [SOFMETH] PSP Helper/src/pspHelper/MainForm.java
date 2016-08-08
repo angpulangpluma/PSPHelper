@@ -74,9 +74,7 @@ public class MainForm extends javax.swing.JFrame {
         language = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1057, 800));
         setMinimumSize(new java.awt.Dimension(1057, 529));
-        setPreferredSize(new java.awt.Dimension(1057, 675));
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
