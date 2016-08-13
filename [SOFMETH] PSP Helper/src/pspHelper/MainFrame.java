@@ -678,11 +678,11 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton60ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
-        // TODO add your handling code here:
+        openForm(new TaskPlanningTemplate(), "Task Planning Template");
     }//GEN-LAST:event_jButton74ActionPerformed
 
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
-        // TODO add your handling code here:
+        openForm(new SchedulePlanningTemplate(), "Schedule Planning Template");
     }//GEN-LAST:event_jButton75ActionPerformed
 
     /**

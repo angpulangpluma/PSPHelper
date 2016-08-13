@@ -51,6 +51,8 @@ public class MainForm extends javax.swing.JFrame {
             case "Program Results (3A)": ((ProgramResults_Y)panel).generate(); break;
             case "Test Result Template": ((TestResult)panel).generate(); break;
             case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
+            case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
+            case "Schedule Planning Template": ((SchedulePlanningTemplate)panel).generate(); break;
         }
     }
 
