@@ -41,12 +41,12 @@ public class TestResult extends javax.swing.JPanel {
         for(int i = 0; i < tests.size(); i++) {
             t = tests.get(i);
             String str = 
-                    "Test Name/Number:  " + t.number.getText() + "\n" +
-                    "Test Objective:  " + t.objective.getText() + "\n" +
-                    "Test Description:  " + t.desc.getText() + "\n" +
-                    "Test Conditions:  " + t.conditions.getText() + "\n" +
-                    "Expected Results:  " + t.expected.getText() + "\n" +
-                    "Actual Results:  " + t.actual.getText();
+                    "Test Name/Number  :  " + t.number.getText() + "\n" +
+                    "Test Objective    :  " + t.objective.getText() + "\n" +
+                    "Test Description  :  " + t.desc.getText() + "\n" +
+                    "Test Conditions   :  " + t.conditions.getText() + "\n" +
+                    "Expected Results  :  " + t.expected.getText() + "\n" +
+                    "Actual Results    :  " + t.actual.getText();
             gen.addParagraph(str);
         }
     }

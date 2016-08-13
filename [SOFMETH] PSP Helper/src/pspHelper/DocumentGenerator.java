@@ -69,6 +69,7 @@ public class DocumentGenerator {
         XWPFParagraph general = doc.createParagraph();
         general.setAlignment(ParagraphAlignment.LEFT);
         XWPFRun run2 = general.createRun();
+        run2.setFontSize(12);
         run2.setText("Student: " + student); run2.addBreak();
         run2.setText("Professor: " + prof); run2.addBreak();
         run2.setText("Date: " + date); run2.addBreak();
@@ -96,6 +97,15 @@ public class DocumentGenerator {
             addLine(run, line);
         } while(y < length);
         
+    }
+    
+    public void addTitle(String str) {
+        XWPFParagraph par = doc.createParagraph();
+        par.setAlignment(ParagraphAlignment.LEFT);
+        XWPFRun run = par.createRun();
+        run.setBold(true);
+        run.setFontSize(13);
+        run.setText(str); 
     }
     
     private void addLine(XWPFRun run, String line) {

@@ -646,7 +646,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton56ActionPerformed
 
     private void jButton57ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton57ActionPerformed
-        // TODO add your handling code here:
+        openForm(new SizeEstimatingTemplate(), "Size Estimating Template");
     }//GEN-LAST:event_jButton57ActionPerformed
 
     private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
@@ -674,7 +674,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton59ActionPerformed
 
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
-        // TODO add your handling code here:
+        openForm(new SizeEstimatingTemplate(), "Size Estimating Template");
     }//GEN-LAST:event_jButton60ActionPerformed
 
     private void jButton74ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton74ActionPerformed
