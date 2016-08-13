@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
@@ -21,6 +22,8 @@ import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTTblWidth;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.STTblWidth;
 
 /**
  *
@@ -83,6 +86,7 @@ public class DocumentGenerator {
         for(int i = 0; i < rows; i++) {
             row = table.createRow();
             for(int j = 0; j < cols; j++) {
+                //table.getRow(i).getCell(j).getCTTc().addNewTcPr().addNewTcW().setW(BigInteger.valueOf(2000));
                 row.addNewTableCell().setText(data[i][j]);
             }
         }
@@ -90,6 +94,10 @@ public class DocumentGenerator {
         XWPFParagraph p = doc.createParagraph();
         XWPFRun run = p.createRun();
         run.addBreak();
+        
+        CTTblWidth width = table.getCTTbl().addNewTblPr().addNewTblW();
+        width.setType(STTblWidth.DXA);
+        width.setW(BigInteger.valueOf(9072));
     }
     
     private String[][] getData(JTable table) {

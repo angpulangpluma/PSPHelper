@@ -149,11 +149,13 @@ public class MainForm extends javax.swing.JFrame {
 
         professor.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         professor.setForeground(new java.awt.Color(102, 102, 102));
+        professor.setText("Dr. Raymund Sison");
         professor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
         professor.setOpaque(false);
 
         student.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         student.setForeground(new java.awt.Color(102, 102, 102));
+        student.setText("Hannah Elien L. Sibayan");
         student.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
         student.setOpaque(false);
 
@@ -164,6 +166,7 @@ public class MainForm extends javax.swing.JFrame {
 
         date.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         date.setForeground(new java.awt.Color(102, 102, 102));
+        date.setText("01/01/16");
         date.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
         date.setOpaque(false);
 
@@ -174,6 +177,7 @@ public class MainForm extends javax.swing.JFrame {
 
         section.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         section.setForeground(new java.awt.Color(102, 102, 102));
+        section.setText("X23");
         section.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
         section.setOpaque(false);
 
@@ -184,6 +188,7 @@ public class MainForm extends javax.swing.JFrame {
 
         language.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         language.setForeground(new java.awt.Color(102, 102, 102));
+        language.setText("C");
         language.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(153, 153, 153)));
         language.setOpaque(false);
 

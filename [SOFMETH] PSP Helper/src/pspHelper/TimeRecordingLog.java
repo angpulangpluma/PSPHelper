@@ -9,6 +9,7 @@ import java.awt.Font;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -33,16 +34,17 @@ public class TimeRecordingLog extends javax.swing.JPanel {
     }
     
     public void addDeltaTime() {
-        DefaultTableModel dtm = (DefaultTableModel) table0.getModel();
-        int rows = dtm.getRowCount();
-        String x[] = new String[rows];
+        //DefaultTableModel dtm = (DefaultTableModel) table0.getModel();
+        int rows = table0.getRowCount();
+        //String x[] = new String[rows];
 
         for(int i = 0; i < rows; i++) {
-            x[i] = getDeltaTime(i);
+            //x[i] = getDeltaTime(i);
+            table0.setValueAt(getDeltaTime(i), i, 4);
         }
-        dtm.addColumn("Delta Time", x);
+        //dtm.addColumn("Delta Time", x);
         
-        table0.setModel(dtm);
+        //table0.setModel(dtm);
     }
     
     public String getDeltaTime(int row) {
@@ -53,21 +55,20 @@ public class TimeRecordingLog extends javax.swing.JPanel {
             String time1 = (String) table0.getValueAt(row, 1);
             String time2 = (String) table0.getValueAt(row, 2);
             
-            System.out.println("Time 1: " + time1);
-            System.out.println("Time 2: " + time2);
-            System.out.println("Interrupt: " + table0.getValueAt(row, 3).toString());
-            
             int interrupt = (int) table0.getValueAt(row, 3);
-            
-            
             
             SimpleDateFormat format = new SimpleDateFormat("HH:mm");
             Date date1 = format.parse(time1);
             Date date2 = format.parse(time2);
             long diff = date2.getTime() - date1.getTime();
-            long diffMinutes = diff / (60 * 1000) % 60;
-            diffMinutes += interrupt;
-            System.out.println("DELTA TIME: " + diffMinutes);
+            //long diffMinutes = diff / (60 * 1000) % 60;
+            long diffMinutes = TimeUnit.MILLISECONDS.toMinutes(diff);
+            System.out.println("date1: " + date1.getTime());
+            System.out.println("date2: " + date2.getTime());
+            System.out.println("diff in long: " + diff);
+            System.out.println("DELTA TIME X: " + diffMinutes);
+            diffMinutes -= interrupt;
+            System.out.println("DELTA TIME Y: " + diffMinutes);
             return diffMinutes + "";
         } catch (ParseException ex) {
             Logger.getLogger(TimeRecordingLog.class.getName()).log(Level.SEVERE, null, ex);
@@ -98,18 +99,26 @@ public class TimeRecordingLog extends javax.swing.JPanel {
         table0.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         table0.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"", "", "", null, null, null}
+                {"8/13/16", "3:26", "4:26",  new Integer(30), null, "Plan", "CR Break"},
+                {"8/13/16", "4:27", "5:27",  new Integer(0), null, "Design", "Nothen"}
             },
             new String [] {
-                "Date", "Start", "Stop", "Interruption Time", "Phase", "Comments"
+                "Date", "Start", "Stop", "Interruption Time", "Delta Time", "Phase", "Comments"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, false, true, true
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         table0.setFocusable(false);
@@ -138,7 +147,7 @@ public class TimeRecordingLog extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 2, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("* Use the 24-Time Format (MM:SS)");
+        jLabel1.setText("* Use the 24 Hour Time Format (MM:SS)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
