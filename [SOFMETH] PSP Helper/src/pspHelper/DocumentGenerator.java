@@ -76,6 +76,33 @@ public class DocumentGenerator {
         run2.setText("Language: " + lang); run2.addBreak();
     }
     
+    public void addParagraph(String data) {
+        XWPFParagraph par = doc.createParagraph();
+        par.setAlignment(ParagraphAlignment.LEFT);
+        XWPFRun run = par.createRun();
+        
+        int length = data.length();
+        int x;
+        int y = -1;
+        String line;
+        
+        do {
+            x = y+1;
+            y = data.indexOf("\n", x );
+            System.out.println(x + ", " + y);
+            if(y == -1)
+                y = length;
+            line = data.substring(x, y);
+            addLine(run, line);
+        } while(y < length);
+        
+    }
+    
+    private void addLine(XWPFRun run, String line) {
+        run.setText(line); 
+        run.addBreak();
+    }
+    
     public void addTable(JTable jtable) {
         String data[][] = getData(jtable);
         XWPFTable table = doc.createTable();

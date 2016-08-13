@@ -34,17 +34,11 @@ public class TimeRecordingLog extends javax.swing.JPanel {
     }
     
     public void addDeltaTime() {
-        //DefaultTableModel dtm = (DefaultTableModel) table0.getModel();
         int rows = table0.getRowCount();
-        //String x[] = new String[rows];
 
         for(int i = 0; i < rows; i++) {
-            //x[i] = getDeltaTime(i);
             table0.setValueAt(getDeltaTime(i), i, 4);
         }
-        //dtm.addColumn("Delta Time", x);
-        
-        //table0.setModel(dtm);
     }
     
     public String getDeltaTime(int row) {
