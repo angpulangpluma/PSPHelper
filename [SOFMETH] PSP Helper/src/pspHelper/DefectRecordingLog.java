@@ -47,7 +47,6 @@ public class DefectRecordingLog extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1057, 400));
 
         pane0.setMinimumSize(new java.awt.Dimension(1057, 350));
-        pane0.setPreferredSize(null);
 
         table0.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         table0.setModel(new javax.swing.table.DefaultTableModel(
