@@ -106,8 +106,10 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.setMinimumSize(new java.awt.Dimension(1057, 529));
         mainPanel.setPreferredSize(new java.awt.Dimension(1057, 529));
 
+        jTabbedPane1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         jTabbedPane1.setName("PSP 0"); // NOI18N
 
+        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton2.setText("Project Plan Summary");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +117,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton3.setText("Time Recording Log");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +125,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton4.setText("Defect Recording Log");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +133,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton5.setText("Source Program Listing");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,19 +146,19 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(162, 162, 162)
+                .addGap(155, 155, 155)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addContainerGap(212, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(45, 45, 45)
                 .addComponent(jButton2)
                 .addGap(33, 33, 33)
                 .addComponent(jButton3)
@@ -161,11 +166,12 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jButton4)
                 .addGap(35, 35, 35)
                 .addComponent(jButton5)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Program 1A", jPanel1);
 
+        jButton31.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton31.setText("Process Improvement Proposal");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +179,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton32.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton32.setText("Program Results");
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +187,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton6.setText("Project Plan Summary");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +195,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton7.setText("Time Recording Log");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +203,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton12.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton12.setText("Source Program Listing");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,6 +211,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton13.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton13.setText("Defect Recording Log");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,7 +229,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -232,19 +243,20 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton31))
-                .addGap(33, 33, 33)
+                .addGap(70, 70, 70)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton32))
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
                     .addComponent(jButton12))
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
 
         jTabbedPane1.addTab("Program 2A", jPanel2);
 
+        jButton8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton8.setText("Project Plan Summary");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,6 +264,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton9.setText("Time Recording Log");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,6 +272,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton14.setText("Defect Recording Log");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -266,6 +280,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton15.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton15.setText("Source Program Listing");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,6 +288,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton50.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton50.setText("Program Results");
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -280,6 +296,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton51.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton51.setText("Process Improvement Proposal");
         jButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,7 +314,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -311,19 +328,20 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton51))
-                .addGap(33, 33, 33)
+                .addGap(63, 63, 63)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton50))
-                .addGap(39, 39, 39)
+                .addGap(72, 72, 72)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton14)
                     .addComponent(jButton15))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Program 3A", jPanel3);
 
+        jButton18.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton18.setText("Source Program Listing");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -331,6 +349,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton19.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton19.setText("Defect Recording Log");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,6 +357,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton20.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton20.setText("Time Recording Log");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -345,6 +365,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton55.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton55.setText("Process Improvement Proposal");
         jButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -352,6 +373,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton21.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton21.setText("Project Plan Summary");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,6 +381,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton56.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton56.setText("Test Report Template");
         jButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -366,6 +389,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton57.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton57.setText("Size Estimating Template");
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -383,7 +407,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -401,21 +425,22 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton21)
                     .addComponent(jButton55))
-                .addGap(33, 33, 33)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton20)
                     .addComponent(jButton56))
-                .addGap(39, 39, 39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton19)
                     .addComponent(jButton57))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addComponent(jButton18)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
         );
 
         jTabbedPane1.addTab("Program 4A", jPanel4);
 
+        jButton22.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton22.setText("Source Program Listing");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -423,6 +448,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton23.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton23.setText("Defect Recording Log");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -430,6 +456,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton24.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton24.setText("Time Recording Log");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -437,6 +464,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton58.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton58.setText("Process Improvement Proposal");
         jButton58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -444,6 +472,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton25.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton25.setText("Project Plan Summary");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -451,6 +480,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton59.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton59.setText("Test Report Template");
         jButton59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -458,6 +488,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton60.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton60.setText("Size Estimating Template");
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -465,6 +496,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton74.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton74.setText("Task Planning Template");
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -472,6 +504,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton75.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton75.setText("Schedule Planning Template");
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -490,7 +523,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton23, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -498,7 +531,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jButton74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(29, 29, 29))
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(156, 156, 156)
+                .addGap(163, 163, 163)
                 .addComponent(jButton75, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -521,9 +554,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton22)
                     .addComponent(jButton74))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton75)
-                .addContainerGap())
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Program 5A", jPanel5);
@@ -532,11 +565,15 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(mainPanelLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(mainPanelLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("PSP 0");
@@ -545,13 +582,13 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 592, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
