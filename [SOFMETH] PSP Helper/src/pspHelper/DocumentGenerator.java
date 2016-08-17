@@ -121,10 +121,22 @@ public class DocumentGenerator {
         int cols = data[0].length;
         
         for(int i = 0; i < rows; i++) {
-            row = table.createRow();
+            if(i == 0) {
+                row = table.getRow(0);
+                for(int j = 1; j < cols; j++) {
+                    row.addNewTableCell();
+                }
+            }
+            else {
+                row = table.createRow();
+            }
+        }
+        
+        for(int i = 0; i < rows; i++) {
+             row = table.getRow(i);
             for(int j = 0; j < cols; j++) {
                 //table.getRow(i).getCell(j).getCTTc().addNewTcPr().addNewTcW().setW(BigInteger.valueOf(2000));
-                row.addNewTableCell().setText(data[i][j]);
+                row.getCell(j).setText(data[i][j]);
             }
         }
         

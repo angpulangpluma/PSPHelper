@@ -48,6 +48,9 @@ public class TestResultTemplate extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         actual = new javax.swing.JTextArea();
 
+        setMinimumSize(new java.awt.Dimension(1000, 569));
+        setPreferredSize(new java.awt.Dimension(1000, 569));
+
         jLabel3.setBackground(new java.awt.Color(153, 153, 153));
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 102));
