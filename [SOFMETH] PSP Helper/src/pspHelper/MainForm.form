@@ -6,7 +6,6 @@
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1057, 529]"/>
     </Property>
-    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -96,7 +95,7 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="scrollPane" min="-2" pref="459" max="-2" attributes="0"/>
+              <Component id="scrollPane" pref="459" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="jPanel2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>

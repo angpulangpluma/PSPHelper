@@ -28,10 +28,12 @@ public class TestResult extends javax.swing.JPanel {
     
     private void add() {
         TestResultTemplate newTest = new TestResultTemplate(tests.size()+1);
+        newTest.setVisible(true);
         tests.add(newTest);
 //        jPanel1.add(new JLabel("Hi"));
         jPanel1.add(newTest);
-        newTest.setVisible(true);
+        
+        jPanel1.repaint(); jPanel1.revalidate();
         repaint(); revalidate();
         System.out.println("+ A D D");
     }
@@ -62,6 +64,8 @@ public class TestResult extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+
+        setMinimumSize(new java.awt.Dimension(1052, 463));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -94,10 +98,12 @@ public class TestResult extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(821, 821, 821)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(821, 821, 821)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

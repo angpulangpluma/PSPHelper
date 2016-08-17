@@ -5,6 +5,8 @@
  */
 package pspHelper;
 
+import javax.swing.JFrame;
+
 
 /**
  *
@@ -16,9 +18,12 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         MainFrame main = new MainFrame();
         main.setVisible(true);
+        
+//        JFrame f = new JFrame();
+//        f.setVisible(true);
+//        f.add(new TestResultTemplate(3));
     }
     
 }
