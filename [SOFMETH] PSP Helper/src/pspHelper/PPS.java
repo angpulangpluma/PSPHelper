@@ -34,8 +34,14 @@ public class PPS extends javax.swing.JPanel {
                 remove(pane1);
                 remove(pane2);
                 remove(pane6); break;
-            case 4: remove(pane1); break;
-            case 5: remove(pane0); break;
+            case 4: 
+                remove(pane1);
+                remove(pane7);
+                remove(pane6); break;
+            case 5: 
+                remove(pane0);
+                remove(pane7);
+                remove(pane6); break;
         }
         repaint(); revalidate();
     }

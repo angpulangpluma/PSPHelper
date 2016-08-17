@@ -94,14 +94,16 @@ public class MainFrame extends javax.swing.JFrame {
         jButton75 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(705, 413));
-        setMinimumSize(new java.awt.Dimension(705, 413));
-        setPreferredSize(new java.awt.Dimension(705, 413));
+        setMaximumSize(new java.awt.Dimension(705, 410));
+        setMinimumSize(new java.awt.Dimension(705, 410));
+        setPreferredSize(new java.awt.Dimension(705, 410));
+        setResizable(false);
 
         mainPanel.setMinimumSize(new java.awt.Dimension(1057, 529));
         mainPanel.setPreferredSize(new java.awt.Dimension(1057, 529));
 
         jTabbedPane1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jTabbedPane1.setMinimumSize(new java.awt.Dimension(705, 410));
         jTabbedPane1.setName("PSP 0"); // NOI18N
 
         jPanel1.setMaximumSize(new java.awt.Dimension(617, 329));
@@ -109,6 +111,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton2.setText("Project Plan Summary");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jButton3.setText("Time Recording Log");
@@ -569,7 +576,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         pack();
@@ -686,6 +693,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton75ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton75ActionPerformed
         openForm(new SchedulePlanningTemplate(), "Schedule Planning Template");
     }//GEN-LAST:event_jButton75ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        openForm((JPanel)new PPS(1), "Project Plan Summary");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
