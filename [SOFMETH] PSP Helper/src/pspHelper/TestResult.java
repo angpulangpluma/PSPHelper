@@ -5,8 +5,15 @@
  */
 package pspHelper;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.util.ArrayList;
+import javax.swing.BoxLayout;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SpringLayout;
 import static pspHelper.DocumentGenerator.gen;
 
 /**
@@ -16,6 +23,7 @@ import static pspHelper.DocumentGenerator.gen;
 public class TestResult extends javax.swing.JPanel {
 
     ArrayList<TestResultTemplate> tests;
+    JPanel testPanel;
     
     /**
      * Creates new form TestResult
@@ -23,6 +31,10 @@ public class TestResult extends javax.swing.JPanel {
     public TestResult() {
         initComponents();
         tests = new ArrayList<>();
+        testPanel = new JPanel();
+        //testPanel.setMinimumSize(new Dimension(1042, 800));
+        testPanel.setPreferredSize(new Dimension(1042, 570));
+        testPanel.setLayout(new FlowLayout());
         add();
     }
     
@@ -30,10 +42,11 @@ public class TestResult extends javax.swing.JPanel {
         TestResultTemplate newTest = new TestResultTemplate(tests.size()+1);
         newTest.setVisible(true);
         tests.add(newTest);
-//        jPanel1.add(new JLabel("Hi"));
-        jPanel1.add(newTest);
+        testPanel.add(newTest);
         
-        jPanel1.repaint(); jPanel1.revalidate();
+        testPanel.setPreferredSize(new Dimension(1042, 570*tests.size()));
+        scrollPane.setViewportView(testPanel);
+        scrollPane.repaint(); scrollPane.revalidate();
         repaint(); revalidate();
         System.out.println("+ A D D");
     }
@@ -43,12 +56,12 @@ public class TestResult extends javax.swing.JPanel {
         for(int i = 0; i < tests.size(); i++) {
             t = tests.get(i);
             String str = 
-                    "Test Name/Number  :  " + t.number.getText() + "\n" +
-                    "Test Objective    :  " + t.objective.getText() + "\n" +
-                    "Test Description  :  " + t.desc.getText() + "\n" +
-                    "Test Conditions   :  " + t.conditions.getText() + "\n" +
-                    "Expected Results  :  " + t.expected.getText() + "\n" +
-                    "Actual Results    :  " + t.actual.getText();
+                    "Test Name/Number:  " + t.number.getText() + "\n" +
+                    "Test Objective:  " + t.objective.getText() + "\n" +
+                    "Test Description:  " + t.desc.getText() + "\n" +
+                    "Test Conditions:  " + t.conditions.getText() + "\n" +
+                    "Expected Results:  " + t.expected.getText() + "\n" +
+                    "Actual Results:  " + t.actual.getText();
             gen.addParagraph(str);
         }
     }
@@ -63,9 +76,11 @@ public class TestResult extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        scrollPane = new javax.swing.JScrollPane();
 
-        setMinimumSize(new java.awt.Dimension(1052, 463));
+        setMaximumSize(new java.awt.Dimension(1042, 457));
+        setMinimumSize(new java.awt.Dimension(1042, 457));
+        setPreferredSize(new java.awt.Dimension(1042, 457));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -79,39 +94,29 @@ public class TestResult extends javax.swing.JPanel {
             }
         });
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(1052, 400));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1052, 400));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1052, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
+        scrollPane.setBackground(new java.awt.Color(255, 255, 255));
+        scrollPane.setBorder(null);
+        scrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.setMinimumSize(new java.awt.Dimension(1042, 800));
+        scrollPane.setPreferredSize(new java.awt.Dimension(1042, 800));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(821, 821, 821)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(scrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -122,6 +127,6 @@ public class TestResult extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane scrollPane;
     // End of variables declaration//GEN-END:variables
 }

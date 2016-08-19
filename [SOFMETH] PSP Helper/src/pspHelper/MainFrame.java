@@ -679,7 +679,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton25ActionPerformed
 
     private void jButton59ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton59ActionPerformed
-        // TODO add your handling code here:
+        openForm(new TestResult(), "Test Result Template");
     }//GEN-LAST:event_jButton59ActionPerformed
 
     private void jButton60ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton60ActionPerformed
@@ -695,7 +695,6 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton75ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
         openForm((JPanel)new PPS(1), "Project Plan Summary");
     }//GEN-LAST:event_jButton2ActionPerformed
 
