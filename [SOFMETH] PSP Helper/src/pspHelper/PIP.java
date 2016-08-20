@@ -5,7 +5,9 @@
  */
 package pspHelper;
 
+import javax.swing.event.TableModelEvent;
 import static pspHelper.DocumentGenerator.gen;
+import javax.swing.event.TableModelListener;
 
 /**
  *
@@ -18,6 +20,26 @@ public class PIP extends javax.swing.JPanel {
      */
     public PIP() {
         initComponents();
+        
+        jTable1.getModel().addTableModelListener(new TableModelListener(){
+
+            @Override
+            public void tableChanged(TableModelEvent e) {
+//                System.out.println(e);
+                System.out.println("value of row " + e.getFirstRow() + " column " + e.getColumn() +
+                        " - " + jTable1.getValueAt(e.getFirstRow(), e.getColumn()));
+            }
+        });
+        
+        jTable2.getModel().addTableModelListener(new TableModelListener(){
+
+            @Override
+            public void tableChanged(TableModelEvent tme) {
+                System.out.println("value of row " + tme.getFirstRow() + " column " + tme.getColumn() +
+                        " - " + jTable1.getValueAt(tme.getFirstRow(), tme.getColumn()));
+            }
+            
+        });
     }
     
     public void generate() {
@@ -58,8 +80,10 @@ public class PIP extends javax.swing.JPanel {
                 "PIP Number", "Problem Description"
             }
         ));
+        jTable1.setColumnSelectionAllowed(true);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
+        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setMinWidth(200);
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(200);
