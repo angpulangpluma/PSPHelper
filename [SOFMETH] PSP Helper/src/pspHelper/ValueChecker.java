@@ -27,18 +27,40 @@ public class ValueChecker {
         this.src = src;
     }
     
-    public boolean checkNumberingTable(JTable table){
+//    public boolean checkNumberingTable(JTable table){
+//        int value = -1;
+//        boolean check = false;
+//        for(int i = 0; i < table.getRowCount(); i++){
+//            try{
+//                value = Integer.parseInt((String)table.getValueAt(i, 0));
+//                if (value>0)
+//                    check = true;
+//                else check = false;
+//            } catch (NumberFormatException e){
+//                JOptionPane.showMessageDialog(src, "Please enter a non-negative number for ID at row " + 
+//                        (i+1) + " column " + 1);
+//            }
+//            if (!check) break;
+//        }
+//        return check;
+//    }
+    
+    public boolean checkNumericValueTable(JTable table, int colIndex){
         int value = -1;
         boolean check = false;
-        for(int i = 0; i < table.getRowCount(); i++){
+        for (int i = 0; i < table.getRowCount(); i++){
             try{
-                value = Integer.parseInt((String)table.getValueAt(i, 0));
-                if (value>0)
+                value = Integer.parseInt((String)table.getValueAt(i, colIndex));
+                if (value > 0)
                     check = true;
-                else check = false;
+                else {
+                    check = false;
+                    JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
+                            (i+1) + " column " + (colIndex+1));
+                }
             } catch (NumberFormatException e){
-                JOptionPane.showMessageDialog(src, "Please enter a non-negative number for ID at row " + 
-                        i + " column " + 0);
+                JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
+                            (i+1) + " column " + (colIndex+1));
             }
             if (!check) break;
         }

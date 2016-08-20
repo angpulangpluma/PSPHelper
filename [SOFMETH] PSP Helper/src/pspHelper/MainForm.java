@@ -87,6 +87,7 @@ public class MainForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1057, 529));
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -281,12 +282,18 @@ public class MainForm extends javax.swing.JFrame {
         boolean validEntries = false;
         switch(type){
             case "Project Plan Summary": ((PPS)panel).generate(); break;
-            case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
+            case "Defect Recording Log": 
+//                ((DefectRecordingLog)panel).generate(); 
+                if (valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 2) &&
+                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 5) &&
+                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 6))
+                    validEntries = true;
+                break;
             case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
             case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
             case "Process Improvement Proposal":  
-                if ( valueChecker.checkNumberingTable(((PIP)panel).getProblemTablePIP()) &&
-                     valueChecker.checkNumberingTable(((PIP)panel).getProposalTablePIP())) 
+                if ( valueChecker.checkNumericValueTable(((PIP)panel).getProblemTablePIP(), 0) &&
+                     valueChecker.checkNumericValueTable(((PIP)panel).getProposalTablePIP(), 0) ) 
                     validEntries = true;
                 break;
             case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;
@@ -302,21 +309,7 @@ public class MainForm extends javax.swing.JFrame {
             addBody();
             gen.saveDoc();
         } else {
-            switch(type){
-                case "Project Plan Summary": ((PPS)panel).generate(); break;
-                case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
-                case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
-                case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
-                case "Process Improvement Proposal":  
-                    JOptionPane.showMessageDialog(this, "Please correct your input.");
-                    break;
-                case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;
-                case "Program Results (3A)": ((ProgramResults_Y)panel).generate(); break;
-                case "Test Result Template": ((TestResult)panel).generate(); break;
-                case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
-                case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
-                case "Schedule Planning Template": ((SchedulePlanningTemplate)panel).generate(); break;
-            }
+            JOptionPane.showMessageDialog(this, "Please correct your input.");
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed

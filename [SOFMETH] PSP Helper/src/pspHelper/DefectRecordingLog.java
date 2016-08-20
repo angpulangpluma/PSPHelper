@@ -6,6 +6,7 @@
 package pspHelper;
 
 import java.awt.Font;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import static pspHelper.DocumentGenerator.gen;
 
@@ -27,6 +28,10 @@ public class DefectRecordingLog extends javax.swing.JPanel {
     
     public void generate() {
         gen.addTable(table0);
+    }
+    
+    public JTable getDRLTable(){
+        return table0;
     }
 
     /**
