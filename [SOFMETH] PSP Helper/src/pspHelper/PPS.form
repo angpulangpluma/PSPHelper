@@ -215,28 +215,7 @@
               <Connection code="new javax.swing.table.DefaultTableModel(&#xa;    new Object [][] {&#xa;        {&quot;Base (B)&quot;, null, null, null},&#xa;        {&quot;  Deleted (D)&quot;, null, null, null},&#xa;        {&quot;  Modified (M)&quot;, null, null, null},&#xa;        {&quot;  Added (A)&quot;, null, null, null},&#xa;        {&quot;  Reused (R)&quot;, null, null, null},&#xa;        {&quot;Total New and Changed (N)&quot;, null, null, null},&#xa;        {&quot;Total LOC (T)&quot;, null, null, null},&#xa;        {&quot;Total Reused&quot;, null, null, null}&#xa;    },&#xa;    new String [] {&#xa;        &quot;Program Size&quot;, &quot;Plan&quot;, &quot;Actual&quot;, &quot;To Date&quot;&#xa;    }&#xa;) {&#xa;    boolean[] canEdit = new boolean [] {&#xa;        false, true, true, true&#xa;    };&#xa;&#xa;    public boolean isCellEditable(int rowIndex, int columnIndex) {&#xa;        if (columnIndex==1 &amp;&amp; rowIndex!=5)&#xa;            return false;&#xa;        else return canEdit [columnIndex];&#xa;    }&#xa;}" type="code"/>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
-              <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Program Size"/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Plan"/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Actual"/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="To Date"/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-              </TableColumnModel>
+              <TableColumnModel selectionModel="0"/>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -304,22 +283,22 @@
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Program Size"/>
+                  <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Plan"/>
+                  <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="Actual"/>
+                  <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title value="To Date"/>
+                  <Title/>
                   <Editor/>
                   <Renderer/>
                 </Column>
@@ -492,6 +471,25 @@
                 <Column editable="true" title="To Date" type="java.lang.Object"/>
                 <Column editable="true" title="To Date %" type="java.lang.Object"/>
               </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
             </Property>
             <Property name="focusable" type="boolean" value="false"/>
             <Property name="gridColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">

@@ -281,19 +281,79 @@ public class MainForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean validEntries = false;
         switch(type){
-            case "Project Plan Summary": ((PPS)panel).generate(); break;
+            case "Project Plan Summary": 
+//                ((PPS)panel).generate(); 
+                switch(((PPS)panel).getType()){
+                    case 1:
+                        if (valueChecker.checkNumericValueTable(((PPS)panel).getTable6(), 1, ((PPS)panel).getTable6().getRowCount()-1) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable6(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable6(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 2, 0))
+                            validEntries = true;
+                        break;
+                    case 2:
+                    case 3:
+                        if (valueChecker.checkNumericValueTable(((PPS)panel).getTable7(), 1, 5) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable7(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable7(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 2, 0))
+                            validEntries = true;
+                        break;
+                    case 4:
+                        if (valueChecker.checkNumericValueTable(((PPS)panel).getTable0(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable0(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable0(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 2, 0))
+                            validEntries = true;
+                        break;
+                    case 5:
+                        if (valueChecker.checkNumericValueTable(((PPS)panel).getTable1(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable1(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable1(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable2(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable3(), 3, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable4(), 2, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 1, 0) &&
+                            valueChecker.checkNumericValueTable(((PPS)panel).getTable5(), 2, 0))
+                            validEntries = true;
+                        break;
+                }    
+                break;
             case "Defect Recording Log": 
 //                ((DefectRecordingLog)panel).generate(); 
-                if (valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 2) &&
-                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 5) &&
-                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 6))
+                if (valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 2, 0) &&
+                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 5, 0) &&
+                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 6, 0))
                     validEntries = true;
                 break;
             case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
             case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
             case "Process Improvement Proposal":  
-                if ( valueChecker.checkNumericValueTable(((PIP)panel).getProblemTablePIP(), 0) &&
-                     valueChecker.checkNumericValueTable(((PIP)panel).getProposalTablePIP(), 0) ) 
+                if ( valueChecker.checkNumericValueTable(((PIP)panel).getProblemTablePIP(), 0, 0) &&
+                     valueChecker.checkNumericValueTable(((PIP)panel).getProposalTablePIP(), 0, 0) ) 
                     validEntries = true;
                 break;
             case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;

@@ -118,6 +118,7 @@ public class DefectRecordingLog extends javax.swing.JPanel {
         DefaultTableModel dtm = (DefaultTableModel) table0.getModel();
         count++;
         dtm.addRow(new Object[] {"", count, "", "", "", "", "", ""});
+        repaint(); revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

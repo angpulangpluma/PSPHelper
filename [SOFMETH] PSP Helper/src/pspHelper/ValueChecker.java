@@ -45,25 +45,37 @@ public class ValueChecker {
 //        return check;
 //    }
     
-    public boolean checkNumericValueTable(JTable table, int colIndex){
+    public boolean checkNumericValueTable(JTable table, int colIndex, int startingRow){
         int value = -1;
+        int i;
         boolean check = false;
-        for (int i = 0; i < table.getRowCount(); i++){
-            try{
-                value = Integer.parseInt((String)table.getValueAt(i, colIndex));
-                if (value > 0)
-                    check = true;
-                else {
+        System.out.println("Number of rows in the table: " + table.getRowCount());
+        for (i = startingRow; i < table.getRowCount(); i++){
+            System.out.println("Value at row " + (i+1) + " column " + (colIndex+1) + ": " + 
+                    table.getValueAt(i, colIndex).toString() + "(" + table.getValueAt(i, colIndex).toString().length()+ ")");
+            if(table.getValueAt(i, colIndex).toString().length()>0){
+                System.out.println("Got in!");
+                try{
+                    value = Integer.parseInt((String)table.getValueAt(i, colIndex));
+                    if (value > 0)
+                        check = true;
+                    else check = false;
+                } catch (NumberFormatException e){
+    //                JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
+    //                            (i+1) + " column " + (colIndex+1));
                     check = false;
-                    JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
-                            (i+1) + " column " + (colIndex+1));
                 }
-            } catch (NumberFormatException e){
-                JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
-                            (i+1) + " column " + (colIndex+1));
+            } else check = true;
+            if (!check) {
+//                JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
+//                                (i+1) + " column " + (colIndex+1));
+                break;
             }
-            if (!check) break;
         }
+        if (!check)
+            JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
+                            (i+1) + " column " + (colIndex+1));
+        else System.out.println("All checks out!");
         return check;
     }
 

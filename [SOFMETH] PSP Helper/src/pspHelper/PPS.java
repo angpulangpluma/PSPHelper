@@ -72,6 +72,42 @@ public class PPS extends javax.swing.JPanel {
         }
     }
     
+    public JTable getTable0(){
+        return table0;
+    }
+    
+    public JTable getTable1(){
+        return table1;
+    }
+    
+    public JTable getTable2(){
+        return table2;
+    }
+    
+    public JTable getTable3(){
+        return table3;
+    }
+    
+    public JTable getTable4(){
+        return table4;
+    }
+    
+    public JTable getTable5(){
+        return table5;
+    }
+    
+    public JTable getTable6(){
+        return table6;
+    }
+    
+    public JTable getTable7(){
+        return table7;
+    }
+    
+    public int getType(){
+        return type;
+    }
+    
     /*
     private String[][] getData(JTable table) {
         
@@ -246,12 +282,6 @@ public class PPS extends javax.swing.JPanel {
         table7.getTableHeader().setReorderingAllowed(false);
         table7.getTableHeader().setFont(new Font("Century Gothic", Font.PLAIN, 18));
         pane7.setViewportView(table7);
-        if (table7.getColumnModel().getColumnCount() > 0) {
-            table7.getColumnModel().getColumn(0).setHeaderValue("Program Size");
-            table7.getColumnModel().getColumn(1).setHeaderValue("Plan");
-            table7.getColumnModel().getColumn(2).setHeaderValue("Actual");
-            table7.getColumnModel().getColumn(3).setHeaderValue("To Date");
-        }
 
         add(pane7);
 
@@ -294,12 +324,6 @@ public class PPS extends javax.swing.JPanel {
         table2.getTableHeader().setReorderingAllowed(false);
         table2.getTableHeader().setFont(new Font("Century Gothic", Font.PLAIN, 18));
         pane2.setViewportView(table2);
-        if (table2.getColumnModel().getColumnCount() > 0) {
-            table2.getColumnModel().getColumn(0).setHeaderValue("Program Size");
-            table2.getColumnModel().getColumn(1).setHeaderValue("Plan");
-            table2.getColumnModel().getColumn(2).setHeaderValue("Actual");
-            table2.getColumnModel().getColumn(3).setHeaderValue("To Date");
-        }
 
         add(pane2);
 
