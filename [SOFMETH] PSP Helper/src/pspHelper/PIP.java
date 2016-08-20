@@ -5,6 +5,9 @@
  */
 package pspHelper;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.event.TableModelEvent;
 import static pspHelper.DocumentGenerator.gen;
 import javax.swing.event.TableModelListener;
@@ -20,7 +23,6 @@ public class PIP extends javax.swing.JPanel {
      */
     public PIP() {
         initComponents();
-        
         jTable1.getModel().addTableModelListener(new TableModelListener(){
 
             @Override
@@ -46,6 +48,14 @@ public class PIP extends javax.swing.JPanel {
         gen.addTable(jTable1);
         gen.addTable(jTable2);
         gen.addParagraph("Notes and Comments\n" + jTextArea1.getText());
+    }
+    
+    public JTable getProblemTablePIP(){
+        return jTable1;
+    }
+    
+    public JTable getProposalTablePIP(){
+        return jTable2;
     }
 
     /**

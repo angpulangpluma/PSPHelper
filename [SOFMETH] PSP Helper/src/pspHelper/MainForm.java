@@ -7,8 +7,10 @@ package pspHelper;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import static pspHelper.DocumentGenerator.gen;
+import pspHelper.ValueChecker;
 
 /**
  *
@@ -18,11 +20,13 @@ public class MainForm extends javax.swing.JFrame {
 
     private String type;
     private JPanel panel;
+    private ValueChecker valueChecker;
     
     public MainForm(JPanel panel, String type) {
         initComponents();
         this.type = type;
         this.panel = panel;
+        valueChecker = new ValueChecker(this);
         title.setText(type);
         setPreferredSize(new Dimension(1057, 675));
         center();
@@ -274,10 +278,47 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        gen.createNewDoc(type);
-        gen.addHeader(type, student.getText(), professor.getText(), date.getText(), section.getText(), language.getText());
-        addBody();
-        gen.saveDoc();
+        boolean validEntries = false;
+        switch(type){
+            case "Project Plan Summary": ((PPS)panel).generate(); break;
+            case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
+            case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
+            case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
+            case "Process Improvement Proposal":  
+                if ( valueChecker.checkNumberingTable(((PIP)panel).getProblemTablePIP()) &&
+                     valueChecker.checkNumberingTable(((PIP)panel).getProposalTablePIP())) 
+                    validEntries = true;
+                break;
+            case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;
+            case "Program Results (3A)": ((ProgramResults_Y)panel).generate(); break;
+            case "Test Result Template": ((TestResult)panel).generate(); break;
+            case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
+            case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
+            case "Schedule Planning Template": ((SchedulePlanningTemplate)panel).generate(); break;
+        }
+        if(validEntries){
+            gen.createNewDoc(type);
+            gen.addHeader(type, student.getText(), professor.getText(), date.getText(), section.getText(), language.getText());
+            addBody();
+            gen.saveDoc();
+        } else {
+            switch(type){
+                case "Project Plan Summary": ((PPS)panel).generate(); break;
+                case "Defect Recording Log": ((DefectRecordingLog)panel).generate(); break;
+                case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
+                case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
+                case "Process Improvement Proposal":  
+                    JOptionPane.showMessageDialog(this, "Please correct your input.");
+                    break;
+                case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;
+                case "Program Results (3A)": ((ProgramResults_Y)panel).generate(); break;
+                case "Test Result Template": ((TestResult)panel).generate(); break;
+                case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
+                case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
+                case "Schedule Planning Template": ((SchedulePlanningTemplate)panel).generate(); break;
+            }
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
