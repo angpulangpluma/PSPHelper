@@ -394,7 +394,19 @@ public class MainForm extends javax.swing.JFrame {
                     valueChecker.checkNumericValueTable(((SizeEstimatingTemplate)panel).getReusedObjects(), 1, 0))
                     validEntries = true;
                 break;
-            case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
+            case "Task Planning Template": 
+//                ((TaskPlanningTemplate)panel).generate();
+                if (valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 0, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 2, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 3, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 4, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 5, 0) &&
+                    valueChecker.checkDateValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 6, 0) &&
+                    valueChecker.checkDateValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 7, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 8, 0) &&
+                    valueChecker.checkNumericValueTable(((TaskPlanningTemplate)panel).getTaskPlanningTable(), 9, 0))
+                    validEntries = true;
+                break;
             case "Schedule Planning Template": 
                 if (valueChecker.checkDateValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 1, 0) &&
                     valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 2, 0) &&

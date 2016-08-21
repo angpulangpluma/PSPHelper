@@ -5,6 +5,7 @@
  */
 package pspHelper;
 
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import static pspHelper.DocumentGenerator.gen;
 
@@ -23,6 +24,10 @@ public class TaskPlanningTemplate extends javax.swing.JPanel {
     
     public void generate() {
         gen.addTable(jTable1);
+    }
+    
+    public JTable getTaskPlanningTable(){
+        return jTable1;
     }
 
     /**
