@@ -5,6 +5,7 @@
  */
 package pspHelper;
 
+import javax.swing.JTable;
 import static pspHelper.DocumentGenerator.gen;
 
 /**
@@ -22,6 +23,10 @@ public class SchedulePlanningTemplate extends javax.swing.JPanel {
     
     public void generate() {
         gen.addTable(jTable1);
+    }
+    
+    public JTable getScheduleTable(){
+        return jTable1;
     }
 
     /**
@@ -54,7 +59,7 @@ public class SchedulePlanningTemplate extends javax.swing.JPanel {
         jLabel9.setBackground(new java.awt.Color(153, 153, 153));
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("                            Actual");
+        jLabel9.setText("                                          Actual");
         jLabel9.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -87,8 +92,7 @@ public class SchedulePlanningTemplate extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(122, 122, 122)))
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

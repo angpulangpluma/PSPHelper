@@ -369,7 +369,16 @@ public class MainForm extends javax.swing.JFrame {
             case "Test Result Template": ((TestResult)panel).generate(); break;
             case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
             case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
-            case "Schedule Planning Template": ((SchedulePlanningTemplate)panel).generate(); break;
+            case "Schedule Planning Template": 
+                if (valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 2, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 3, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 4, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 5, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 6, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 7, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 8, 0))
+                    validEntries = true;
+                break;
         }
         if(validEntries){
             gen.createNewDoc(type);
