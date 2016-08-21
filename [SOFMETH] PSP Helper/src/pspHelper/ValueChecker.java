@@ -4,6 +4,7 @@ package pspHelper;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -76,6 +77,22 @@ public class ValueChecker {
             JOptionPane.showMessageDialog(src, "Please enter a non-negative number at row " +
                             (i+1) + " column " + (colIndex+1));
         else System.out.println("All checks out!");
+        return check;
+    }
+    
+    public boolean checkNumericValueText(JTextField input){
+        boolean check = false;
+        int value = -1;
+        
+        if (input.getText().length()>0){
+            try{
+                value = Integer.parseInt(input.getText());
+            } catch (NumberFormatException e){
+                check = false;
+            }
+        } else check = true;
+        if (!check)
+            JOptionPane.showMessageDialog(src, "Please enter a valid number for input.");
         return check;
     }
 

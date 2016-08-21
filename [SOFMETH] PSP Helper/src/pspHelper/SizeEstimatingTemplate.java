@@ -6,6 +6,8 @@
 package pspHelper;
 
 import java.awt.Font;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import static pspHelper.DocumentGenerator.gen;
 
 /**
@@ -51,6 +53,70 @@ public class SizeEstimatingTemplate extends javax.swing.JPanel {
                 "Lower Prediction Interval:  " + LPI.getText() + "\n" +
                 "Prediction Interval Percent:  " + PI.getText();
         gen.addParagraph(str);
+    }
+    
+    public JTextField getBaseSize(){
+        return B;
+    }
+    
+    public JTextField getLOCDeleted(){
+        return D;
+    }
+    
+    public JTextField getLOCModified(){
+        return M;
+    }
+    
+    public JTextField getProjectedLOC(){
+        return P;
+    }
+    
+    public JTextField getBeta0(){
+        return b0;
+    }
+    
+    public JTextField getBeta1(){
+        return b1;
+    }
+    
+    public JTextField getEstimatedNewandChangedLOC(){
+        return N;
+    }
+    
+    public JTextField getEstimatedTotalLOC(){
+        return T;
+    }
+    
+    public JTextField getTotalNewReused(){
+        return TNR;
+    }
+    
+    public JTextField getPredictionRange(){
+        return range;
+    }
+    
+    public JTextField getUpperPredictionInterval(){
+        return UPI;
+    }
+    
+    public JTextField getLowerPredictionInterval(){
+        return LPI;
+    }
+    
+    public JTextField getPredictionIntervalPercent(){
+        return PI;
+    }
+    
+    public JTable getProjectedLOCTable(){
+        return table0;
+    }
+    
+    public JTable getNewObjects(){
+        return table1;
+    }
+    
+    public JTable getReusedObjects(){
+        return table2;
     }
 
     /**
@@ -442,16 +508,6 @@ public class SizeEstimatingTemplate extends javax.swing.JPanel {
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pane1, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pane0, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pane2, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -494,7 +550,14 @@ public class SizeEstimatingTemplate extends javax.swing.JPanel {
                                     .addComponent(b1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(b0, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(P, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(406, 406, 406))))
+                        .addGap(406, 406, 406))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pane1, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pane0, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pane2, javax.swing.GroupLayout.PREFERRED_SIZE, 963, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -542,8 +605,8 @@ public class SizeEstimatingTemplate extends javax.swing.JPanel {
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

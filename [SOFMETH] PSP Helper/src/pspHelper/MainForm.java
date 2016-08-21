@@ -367,7 +367,25 @@ public class MainForm extends javax.swing.JFrame {
                     validEntries = true;
                 break;
             case "Test Result Template": ((TestResult)panel).generate(); break;
-            case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
+            case "Size Estimating Template": 
+                if (valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getBaseSize()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getLOCDeleted()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getLOCModified()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getProjectedLOC()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getBeta0()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getBeta1()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getEstimatedNewandChangedLOC()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getEstimatedTotalLOC()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getTotalNewReused()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getPredictionRange()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getUpperPredictionInterval()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getLowerPredictionInterval()) &&
+                    valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getPredictionIntervalPercent()) &&
+                    valueChecker.checkNumericValueTable(((SizeEstimatingTemplate)panel).getProjectedLOCTable(), 4, 0) &&
+                    valueChecker.checkNumericValueTable(((SizeEstimatingTemplate)panel).getNewObjects(), 4, 0) &&
+                    valueChecker.checkNumericValueTable(((SizeEstimatingTemplate)panel).getReusedObjects(), 1, 0))
+                    validEntries = true;
+                break;
             case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
             case "Schedule Planning Template": 
                 if (valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 2, 0) &&
