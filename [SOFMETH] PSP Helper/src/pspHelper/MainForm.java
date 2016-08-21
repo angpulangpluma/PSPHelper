@@ -356,8 +356,16 @@ public class MainForm extends javax.swing.JFrame {
                      valueChecker.checkNumericValueTable(((PIP)panel).getProposalTablePIP(), 0, 0) ) 
                     validEntries = true;
                 break;
-            case "Program Results (2A)": ((ProgramResults_X)panel).generate(); break;
-            case "Program Results (3A)": ((ProgramResults_Y)panel).generate(); break;
+            case "Program Results (2A)": 
+                if (valueChecker.checkNumericValueTable(((ProgramResults_X)panel).getTable(), 0, 0) &&
+                    valueChecker.checkNumericValueTable(((ProgramResults_X)panel).getTable(), 1, 0))
+                    validEntries = true;
+                break;
+            case "Program Results (3A)": 
+                if (valueChecker.checkNumericValueTable(((ProgramResults_Y)panel).getTable(), 2, 0) &&
+                    valueChecker.checkNumericValueTable(((ProgramResults_Y)panel).getTable(), 3, 0))
+                    validEntries = true;
+                break;
             case "Test Result Template": ((TestResult)panel).generate(); break;
             case "Size Estimating Template": ((SizeEstimatingTemplate)panel).generate(); break;
             case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;

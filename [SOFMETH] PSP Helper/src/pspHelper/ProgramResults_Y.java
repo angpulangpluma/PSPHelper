@@ -6,6 +6,7 @@
 package pspHelper;
 
 import java.awt.Font;
+import javax.swing.JTable;
 import static pspHelper.DocumentGenerator.gen;
 
 /**
@@ -23,6 +24,10 @@ public class ProgramResults_Y extends javax.swing.JPanel {
     
     public void generate() {
         gen.addTable(table0);
+    }
+    
+    public JTable getTable(){
+        return table0;
     }
 
     /**
