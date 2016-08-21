@@ -396,7 +396,8 @@ public class MainForm extends javax.swing.JFrame {
                 break;
             case "Task Planning Template": ((TaskPlanningTemplate)panel).generate(); break;
             case "Schedule Planning Template": 
-                if (valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 2, 0) &&
+                if (valueChecker.checkDateValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 1, 0) &&
+                    valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 2, 0) &&
                     valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 3, 0) &&
                     valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 4, 0) &&
                     valueChecker.checkNumericValueTable(((SchedulePlanningTemplate)panel).getScheduleTable(), 5, 0) &&
