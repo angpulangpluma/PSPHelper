@@ -349,7 +349,14 @@ public class MainForm extends javax.swing.JFrame {
                     valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 6, 0))
                     validEntries = true;
                 break;
-            case "Time Recording Log": ((TimeRecordingLog)panel).generate(); break;
+            case "Time Recording Log": 
+                if (valueChecker.checkDateValueTable(((TimeRecordingLog)panel).getTimeLog(), 0, 0) &&
+                    valueChecker.checkTimeValueTable(((TimeRecordingLog)panel).getTimeLog(), 1, 0) &&
+                    valueChecker.checkTimeValueTable(((TimeRecordingLog)panel).getTimeLog(), 2, 0) &&
+                    valueChecker.checkNumericValueTable(((TimeRecordingLog)panel).getTimeLog(), 3, 0) &&
+                    valueChecker.checkNumericValueTable(((TimeRecordingLog)panel).getTimeLog(), 4, 0))
+                    validEntries = true;
+                break;
             case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
             case "Process Improvement Proposal":  
                 if ( valueChecker.checkNumericValueTable(((PIP)panel).getProblemTablePIP(), 0, 0) &&

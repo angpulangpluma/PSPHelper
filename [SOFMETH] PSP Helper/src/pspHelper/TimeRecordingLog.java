@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import static pspHelper.DocumentGenerator.gen;
 
@@ -68,6 +69,10 @@ public class TimeRecordingLog extends javax.swing.JPanel {
             Logger.getLogger(TimeRecordingLog.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "";
+    }
+    
+    public JTable getTimeLog(){
+        return table0;
     }
 
     /**
