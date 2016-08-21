@@ -344,7 +344,8 @@ public class MainForm extends javax.swing.JFrame {
                 break;
             case "Defect Recording Log": 
 //                ((DefectRecordingLog)panel).generate(); 
-                if (valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 2, 0) &&
+                if (valueChecker.checkDateValueTable(((DefectRecordingLog)panel).getDRLTable(), 0, 0) &&
+                    valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 2, 0) &&
                     valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 5, 0) &&
                     valueChecker.checkNumericValueTable(((DefectRecordingLog)panel).getDRLTable(), 6, 0))
                     validEntries = true;
