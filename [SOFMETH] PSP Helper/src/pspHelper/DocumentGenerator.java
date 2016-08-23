@@ -14,6 +14,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
@@ -54,6 +56,7 @@ public class DocumentGenerator {
         }
         
         System.out.println("Doc Saved");
+        JOptionPane.showMessageDialog(new JFrame(), "Document Successfully Generated!");
     }
             
     public void addHeader(String strTitle, String student, String prof, String date, String sec, String lang) {
@@ -109,7 +112,11 @@ public class DocumentGenerator {
     }
     
     private void addLine(XWPFRun run, String line) {
-        run.setText(line); 
+        String tab = "";
+        for(int i = 0; i < line.length(); i++)
+            if(line.charAt(i) == '\t')
+                tab += "        ";
+        run.setText(tab + line); 
         run.addBreak();
     }
     

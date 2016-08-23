@@ -94,8 +94,8 @@
                   <Data value="Design"/>
                 </Column>
                 <Column editable="true" title="Comments" type="java.lang.Object">
-                  <Data value="CR Break"/>
-                  <Data value="Nothen"/>
+                  <Data value="Dinner break"/>
+                  <Data value="-"/>
                 </Column>
               </Table>
             </Property>

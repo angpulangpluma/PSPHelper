@@ -177,7 +177,7 @@ public class SizeEstimatingTemplate extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(1053, 1190));
+        setPreferredSize(new java.awt.Dimension(1053, 1230));
 
         jLabel3.setBackground(new java.awt.Color(153, 153, 153));
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N

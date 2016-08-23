@@ -87,7 +87,6 @@ public class MainForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1057, 529));
-        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
@@ -279,6 +278,8 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /*
+        
         boolean validEntries = false;
         switch(type){
             case "Project Plan Summary": 
@@ -358,7 +359,7 @@ public class MainForm extends javax.swing.JFrame {
                     valueChecker.checkNumericValueTable(((TimeRecordingLog)panel).getTimeLog(), 4, 0))
                     validEntries = true;
                 break;
-            case "Source Program Listing": ((SourceProgramListing)panel).generate(); break;
+            case "Source Program Listing": validEntries = true; break;
             case "Process Improvement Proposal":  
                 if ( valueChecker.checkNumericValueTable(((PIP)panel).getProblemTablePIP(), 0, 0) &&
                      valueChecker.checkNumericValueTable(((PIP)panel).getProposalTablePIP(), 0, 0) ) 
@@ -374,7 +375,7 @@ public class MainForm extends javax.swing.JFrame {
                     valueChecker.checkNumericValueTable(((ProgramResults_Y)panel).getTable(), 3, 0))
                     validEntries = true;
                 break;
-            case "Test Result Template": ((TestResult)panel).generate(); break;
+            case "Test Result Template": validEntries = true; break;
             case "Size Estimating Template": 
                 if (valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getBaseSize()) &&
                     valueChecker.checkNumericValueText(((SizeEstimatingTemplate)panel).getLOCDeleted()) &&
@@ -420,6 +421,7 @@ public class MainForm extends javax.swing.JFrame {
                 break;
         }
         if(validEntries){
+            System.out.println("valid");
             gen.createNewDoc(type);
             gen.addHeader(type, student.getText(), professor.getText(), date.getText(), section.getText(), language.getText());
             addBody();
@@ -427,6 +429,12 @@ public class MainForm extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(this, "Please correct your input.");
         }
+        */
+        
+        gen.createNewDoc(type);
+        gen.addHeader(type, student.getText(), professor.getText(), date.getText(), section.getText(), language.getText());
+        addBody();
+        gen.saveDoc();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

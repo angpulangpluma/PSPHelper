@@ -98,8 +98,8 @@ public class TimeRecordingLog extends javax.swing.JPanel {
         table0.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
         table0.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"8/13/16", "3:26", "4:26",  new Integer(30), null, "Plan", "CR Break"},
-                {"8/13/16", "4:27", "5:27",  new Integer(0), null, "Design", "Nothen"}
+                {"8/13/16", "3:26", "4:26",  new Integer(30), null, "Plan", "Dinner break"},
+                {"8/13/16", "4:27", "5:27",  new Integer(0), null, "Design", "-"}
             },
             new String [] {
                 "Date", "Start", "Stop", "Interruption Time", "Delta Time", "Phase", "Comments"

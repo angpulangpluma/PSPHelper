@@ -61,9 +61,9 @@ public class MainFrame extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jButton6 = new javax.swing.JButton();
         jButton31 = new javax.swing.JButton();
         jButton32 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
@@ -75,19 +75,19 @@ public class MainFrame extends javax.swing.JFrame {
         jButton50 = new javax.swing.JButton();
         jButton51 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
+        jButton21 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton55 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
         jButton56 = new javax.swing.JButton();
         jButton57 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        jButton25 = new javax.swing.JButton();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
         jButton58 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
         jButton59 = new javax.swing.JButton();
         jButton60 = new javax.swing.JButton();
         jButton74 = new javax.swing.JButton();
@@ -148,6 +148,15 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(705, 410));
         jPanel2.setLayout(new java.awt.GridLayout(3, 2));
 
+        jButton6.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jButton6.setText("Project Plan Summary");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton6);
+
         jButton31.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton31.setText("Process Improvement Proposal");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
@@ -165,15 +174,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton32);
-
-        jButton6.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jButton6.setText("Project Plan Summary");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton6);
 
         jButton7.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton7.setText("Time Recording Log");
@@ -266,6 +266,15 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(705, 410));
         jPanel4.setLayout(new java.awt.GridLayout(4, 3));
 
+        jButton21.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jButton21.setText("Project Plan Summary");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton21);
+
         jButton18.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton18.setText("Source Program Listing");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
@@ -302,15 +311,6 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jPanel4.add(jButton55);
 
-        jButton21.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jButton21.setText("Project Plan Summary");
-        jButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton21);
-
         jButton56.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton56.setText("Test Report Template");
         jButton56.addActionListener(new java.awt.event.ActionListener() {
@@ -333,6 +333,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanel5.setPreferredSize(new java.awt.Dimension(705, 410));
         jPanel5.setLayout(new java.awt.GridLayout(5, 0));
+
+        jButton25.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
+        jButton25.setText("Project Plan Summary");
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton25ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(jButton25);
 
         jButton22.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton22.setText("Source Program Listing");
@@ -369,15 +378,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jButton58);
-
-        jButton25.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
-        jButton25.setText("Project Plan Summary");
-        jButton25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25ActionPerformed(evt);
-            }
-        });
-        jPanel5.add(jButton25);
 
         jButton59.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton59.setText("Test Report Template");

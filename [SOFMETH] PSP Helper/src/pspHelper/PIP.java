@@ -77,7 +77,7 @@ public class PIP extends javax.swing.JPanel {
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(1057, 1200));
 
-        jTable1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", "Description 1"},
@@ -90,6 +90,7 @@ public class PIP extends javax.swing.JPanel {
             }
         ));
         jTable1.setColumnSelectionAllowed(true);
+        jTable1.setRowHeight(23);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -102,7 +103,7 @@ public class PIP extends javax.swing.JPanel {
 
         jScrollPane3.setPreferredSize(new java.awt.Dimension(1057, 1200));
 
-        jTable2.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        jTable2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", "Some Description Here"},
@@ -114,6 +115,7 @@ public class PIP extends javax.swing.JPanel {
                 "Proposal PIP Number", "Proposal Description"
             }
         ));
+        jTable2.setRowHeight(23);
         jTable2.getTableHeader().setReorderingAllowed(false);
         jScrollPane3.setViewportView(jTable2);
         if (jTable2.getColumnModel().getColumnCount() > 0) {
@@ -191,7 +193,7 @@ public class PIP extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
