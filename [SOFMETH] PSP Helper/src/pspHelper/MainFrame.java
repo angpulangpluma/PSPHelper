@@ -94,471 +94,326 @@ public class MainFrame extends javax.swing.JFrame {
         jButton75 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(705, 410));
-        setMinimumSize(new java.awt.Dimension(705, 410));
-        setPreferredSize(new java.awt.Dimension(705, 410));
-        setResizable(false);
+        setPreferredSize(new java.awt.Dimension(705, 460));
 
-        mainPanel.setMinimumSize(new java.awt.Dimension(1057, 529));
-        mainPanel.setPreferredSize(new java.awt.Dimension(1057, 529));
+        mainPanel.setPreferredSize(new java.awt.Dimension(705, 410));
+        mainPanel.setRequestFocusEnabled(false);
 
         jTabbedPane1.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
-        jTabbedPane1.setMinimumSize(new java.awt.Dimension(705, 410));
         jTabbedPane1.setName("PSP 0"); // NOI18N
 
         jPanel1.setMaximumSize(new java.awt.Dimension(617, 329));
         jPanel1.setMinimumSize(new java.awt.Dimension(617, 329));
+        jPanel1.setPreferredSize(new java.awt.Dimension(705, 410));
+        jPanel1.setLayout(new java.awt.GridLayout(2, 2));
 
-        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton2.setText("Project Plan Summary");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2);
 
-        jButton3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton3.setText("Time Recording Log");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3);
 
-        jButton4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton4.setText("Defect Recording Log");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton4);
 
-        jButton5.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton5.setText("Source Program Listing");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(231, 231, 231)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4)
-                    .addComponent(jButton2)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addGap(8, 8, 8)))
-                .addContainerGap(284, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jButton2)
-                .addGap(33, 33, 33)
-                .addComponent(jButton3)
-                .addGap(28, 28, 28)
-                .addComponent(jButton4)
-                .addGap(30, 30, 30)
-                .addComponent(jButton5)
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
+        jPanel1.add(jButton5);
 
         jTabbedPane1.addTab("Program 1A", jPanel1);
 
-        jButton31.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jPanel2.setPreferredSize(new java.awt.Dimension(705, 410));
+        jPanel2.setLayout(new java.awt.GridLayout(3, 2));
+
+        jButton31.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton31.setText("Process Improvement Proposal");
         jButton31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton31ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton31);
 
-        jButton32.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton32.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton32.setText("Program Results");
         jButton32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton32ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton32);
 
-        jButton6.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton6.setText("Project Plan Summary");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton6);
 
-        jButton7.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton7.setText("Time Recording Log");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton7);
 
-        jButton12.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton12.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton12.setText("Source Program Listing");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton12);
 
-        jButton13.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton13.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton13.setText("Defect Recording Log");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6)
-                    .addComponent(jButton31))
-                .addGap(70, 70, 70)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton32))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton13)
-                    .addComponent(jButton12))
-                .addGap(65, 65, 65))
-        );
+        jPanel2.add(jButton13);
 
         jTabbedPane1.addTab("Program 2A", jPanel2);
 
-        jButton8.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jPanel3.setPreferredSize(new java.awt.Dimension(705, 410));
+        jPanel3.setLayout(new java.awt.GridLayout(3, 2));
+
+        jButton8.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton8.setText("Project Plan Summary");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton8);
 
-        jButton9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton9.setText("Time Recording Log");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton9);
 
-        jButton14.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton14.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton14.setText("Defect Recording Log");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton14);
 
-        jButton15.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton15.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton15.setText("Source Program Listing");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton15);
 
-        jButton50.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton50.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton50.setText("Program Results");
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton50ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton50);
 
-        jButton51.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton51.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton51.setText("Process Improvement Proposal");
         jButton51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton51ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton50, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton51))
-                .addGap(63, 63, 63)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
-                    .addComponent(jButton50))
-                .addGap(72, 72, 72)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jButton15))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel3.add(jButton51);
 
         jTabbedPane1.addTab("Program 3A", jPanel3);
 
-        jButton18.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jPanel4.setPreferredSize(new java.awt.Dimension(705, 410));
+        jPanel4.setLayout(new java.awt.GridLayout(4, 3));
+
+        jButton18.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton18.setText("Source Program Listing");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton18);
 
-        jButton19.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton19.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton19.setText("Defect Recording Log");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton19ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton19);
 
-        jButton20.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton20.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton20.setText("Time Recording Log");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton20);
 
-        jButton55.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton55.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton55.setText("Process Improvement Proposal");
         jButton55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton55ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton55);
 
-        jButton21.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton21.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton21.setText("Project Plan Summary");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton21);
 
-        jButton56.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton56.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton56.setText("Test Report Template");
         jButton56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton56ActionPerformed(evt);
             }
         });
+        jPanel4.add(jButton56);
 
-        jButton57.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton57.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton57.setText("Size Estimating Template");
         jButton57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton57ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton57, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(166, 166, 166)
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton21)
-                    .addComponent(jButton55))
-                .addGap(50, 50, 50)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton20)
-                    .addComponent(jButton56))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton19)
-                    .addComponent(jButton57))
-                .addGap(40, 40, 40)
-                .addComponent(jButton18)
-                .addGap(43, 43, 43))
-        );
+        jPanel4.add(jButton57);
 
         jTabbedPane1.addTab("Program 4A", jPanel4);
 
-        jButton22.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jPanel5.setPreferredSize(new java.awt.Dimension(705, 410));
+        jPanel5.setLayout(new java.awt.GridLayout(5, 0));
+
+        jButton22.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton22.setText("Source Program Listing");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton22);
 
-        jButton23.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton23.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton23.setText("Defect Recording Log");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton23);
 
-        jButton24.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton24.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton24.setText("Time Recording Log");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton24);
 
-        jButton58.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton58.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton58.setText("Process Improvement Proposal");
         jButton58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton58ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton58);
 
-        jButton25.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton25.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton25.setText("Project Plan Summary");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton25ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton25);
 
-        jButton59.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton59.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton59.setText("Test Report Template");
         jButton59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton59ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton59);
 
-        jButton60.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton60.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton60.setText("Size Estimating Template");
         jButton60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton60ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton60);
 
-        jButton74.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton74.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton74.setText("Task Planning Template");
         jButton74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton74ActionPerformed(evt);
             }
         });
+        jPanel5.add(jButton74);
 
-        jButton75.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jButton75.setFont(new java.awt.Font("Century Gothic", 0, 16)); // NOI18N
         jButton75.setText("Schedule Planning Template");
         jButton75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton75ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton59, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton60, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(29, 29, 29))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(jButton75, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton25)
-                    .addComponent(jButton58))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton24)
-                    .addComponent(jButton59))
-                .addGap(39, 39, 39)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton23)
-                    .addComponent(jButton60))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton22)
-                    .addComponent(jButton74))
-                .addGap(18, 18, 18)
-                .addComponent(jButton75)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel5.add(jButton75);
 
         jTabbedPane1.addTab("Program 5A", jPanel5);
 
@@ -566,15 +421,11 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 352, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 119, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jTabbedPane1.getAccessibleContext().setAccessibleName("PSP 0");
@@ -585,13 +436,13 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
